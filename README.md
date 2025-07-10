@@ -58,36 +58,6 @@ Linki is a comprehensive marketing platform connecting **influencers** with **ad
 
 ---
 
-## 🏗️ System Architecture
-
-### Microservice Architecture
-
-```
-
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│     Frontend    │     │   API Gateway   │     │    Discovery    │
-│    (Vue.js)     ◄───►│   (Port: 8000)  ◄───►│   (Port: 8761)  │
-│                 │     │                 │     │                 │
-└─────────────────┘     └─────────────────┘     └─────────────────┘
-│
-┌───────────────┼───────────────┐
-│               │               │
-┌───────▼──────┐ ┌──────▼──────┐ ┌─────▼──────┐
-│ Integration  │ │Chat Service │ │  Payment   │
-│   Service    │ │             │ │  Service   │
-│              │ │             │ │            │
-└──────────────┘ └─────────────┘ └────────────┘
-│               │               │
-┌───────▼──────┐ ┌──────▼──────┐ ┌─────▼──────┐
-│  Subscribe   │ │    Admin    │ │  Chatbot   │
-│   Service    │ │ Integration │ │  Service   │
-│              │ │   Service   │ │            │
-└──────────────┘ └─────────────┘ └────────────┘
-
-```
-
----
-
 ## 🛠️ Tech Stack
 
 ### Backend
