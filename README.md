@@ -5,7 +5,7 @@
   />
 </div>
 
-# Linki - Connecting influencers
+# Linki - All-in-one platform for influencer marketing
 
 ## 📝 Project Overview
 
