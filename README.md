@@ -1,25 +1,23 @@
 <div align="center">
   <img 
-    src="https://capsule-render.vercel.app/api?type=soft&color=7b21e8&height=120&text=LINKI%20PROJECT&animation=fadeIn&fontColor=ffffff&fontSize=60" 
+    src="https://capsule-render.vercel.app/api?type=soft&color=7b21e8&height=120&text=Linki%&animation=fadeIn&fontColor=ffffff&fontSize=60" 
     width="100%"
   />
 </div>
 
-# Linki - 인플루언서 마케팅 플랫폼
+# Linki - Connecting influencers
 
-## 📝 프로젝트 개요
+## 📝 Project Overview
 
-Linki는 인플루언서와 광고주를 연결하는 종합 마케팅 플랫폼입니다.   
-인플루언서는 브랜드 캠페인에 참여하고, 광고주는 적합한 인플루언서를 찾아 마케팅을 진행할 수 있습니다.   
-전자계약, 실시간 채팅, 자동 정산 등의 기능을 통해 안전하고 투명한 광고 생태계를 제공합니다.
+Linki is a comprehensive marketing platform connecting **influencers** with **advertisers**. Influencers can participate in brand campaigns, while advertisers can find suitable influencers for their marketing initiatives. The platform ensures a secure and transparent advertising ecosystem through features like **electronic contracts, real-time chat, and automated settlements**.
 
-### [ERD 바로가기](https://www.erdcloud.com/d/tHnS9EZLguhoSFaMD)
-### [회원 페이지 바로가기](https://www.linki.kr)
-### [관리자 페이지 바로가기](https://www.admin.linki.kr)
-### [TEAM NOTION 바로가기 ](https://shorturl.at/dwkOo)
-## 🏗️ 시스템 아키텍처
+### [ERD Link](https://www.erdcloud.com/d/tHnS9EZLguhoSFaMD)
+### [User Page](https://www.linki.kr)
+### [Admin Page](https://www.admin.linki.kr)
+### [Team Notion](https://shorturl.at/dwkOo)
+## 🏗️ System Architecture
 
-### 마이크로서비스 구조
+### Microservice Architecture
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Frontend      │    │   API Gateway   │    │   Discovery     │
@@ -44,7 +42,53 @@ Linki는 인플루언서와 광고주를 연결하는 종합 마케팅 플랫폼
 
 
 
-## 🛠️ 기술 스택
+```markdown
+<div align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=soft&color=7b21e8&height=120&text=LINKI%20PROJECT&animation=fadeIn&fontColor=ffffff&fontSize=60"
+    width="100%"
+  />
+</div>
+
+# Linki - Influencer Marketing Platform
+
+## 📝 Project Overview
+
+Linki is a comprehensive marketing platform connecting **influencers** with **advertisers**. Influencers can participate in brand campaigns, while advertisers can find suitable influencers for their marketing initiatives. The platform ensures a secure and transparent advertising ecosystem through features like **electronic contracts, real-time chat, and automated settlements**.
+
+---
+
+## 🏗️ System Architecture
+
+### Microservice Architecture
+
+```
+
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│     Frontend    │     │   API Gateway   │     │    Discovery    │
+│    (Vue.js)     ◄───►│   (Port: 8000)  ◄───►│   (Port: 8761)  │
+│                 │     │                 │     │                 │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+│
+┌───────────────┼───────────────┐
+│               │               │
+┌───────▼──────┐ ┌──────▼──────┐ ┌─────▼──────┐
+│ Integration  │ │Chat Service │ │  Payment   │
+│   Service    │ │             │ │  Service   │
+│              │ │             │ │            │
+└──────────────┘ └─────────────┘ └────────────┘
+│               │               │
+┌───────▼──────┐ ┌──────▼──────┐ ┌─────▼──────┐
+│  Subscribe   │ │    Admin    │ │  Chatbot   │
+│   Service    │ │ Integration │ │  Service   │
+│              │ │   Service   │ │            │
+└──────────────┘ └─────────────┘ └────────────┘
+
+```
+
+---
+
+## 🛠️ Tech Stack
 
 ### Backend
 - **Framework**: Spring Boot 3.4.5+
@@ -52,15 +96,15 @@ Linki는 인플루언서와 광고주를 연결하는 종합 마케팅 플랫폼
 - **Database**: MySQL 8.0
 - **ORM**: JPA/Hibernate + MyBatis
 - **Security**: Spring Security + JWT
-- **Message Oriented middleware**: Apache Kafka
+- **Message Oriented Middleware**: Apache Kafka
 - **Service Discovery**: Netflix Eureka
 - **API Gateway**: Spring Cloud Gateway
 - **Cache**: Redis
-- **External APIs**: 
-  - YouTube Data API v3
-  - 유캔사인 전자계약 API
-  - Toss Payments API
-  - OpenAI GPT API
+- **External APIs**:
+    - YouTube Data API v3
+    - YuCanSign Electronic Contract API
+    - Toss Payments API
+    - OpenAI GPT API
 
 ### Frontend
 - **Framework**: Vue.js 3
@@ -75,97 +119,108 @@ Linki는 인플루언서와 광고주를 연결하는 종합 마케팅 플랫폼
 - **Build Tool**: Gradle
 - **Development Tools**: Vite, ESLint, Prettier
 
-## 🎯 주요 기능
+---
 
-### 👤 사용자 관리
-- **인플루언서**: 채널 등록, 캠페인 제안서 제출, 계약 관리
-- **광고주**: 캠페인 생성, 인플루언서 선택, 계약서 작성
-- **관리자**: 사용자 관리, 계약 승인, 정산 관리
-- **OAuth 로그인**: Google 소셜 로그인 지원
+## 🎯 Key Features
 
-### 📊 캠페인 & 계약 관리
-- 캠페인 생성 및 관리
-- 제안서 제출 및 검토
-- 전자계약서 생성 (유캔사인 연동)
-- 계약 상태 자동 업데이트
-- 광고 이행 확인 시스템
+### 👤 User Management
+- **Influencers**: Channel registration, campaign proposal submission, contract management
+- **Advertisers**: Campaign creation, influencer selection, contract drafting
+- **Administrators**: User management, contract approval, settlement management
+- **OAuth Login**: Google social login support
 
-### 💬 실시간 커뮤니케이션
-- WebSocket 기반 실시간 채팅
-- 계약 진행 상황 알림
-- SSE(Server-Sent Events) 기반 알림 시스템
-- 이메일 알림 기능
+### 📊 Campaign & Contract Management
+- Campaign creation and management
+- Proposal submission and review
+- Electronic contract generation (YuCanSign integration)
+- Automatic contract status updates
+- Advertising fulfillment verification system
 
-### 💳 결제 & 정산
-- Toss Payments 연동 결제
-- 구독 자동 갱신 서비스
-- 구독 취소 서비스
+### 💬 Real-time Communication
+- WebSocket-based real-time chat
+- Contract progress notifications
+- SSE (Server-Sent Events) based notification system
+- Email notification feature
 
-### 📈 분석 & 리포팅
-- YouTube 채널 통계 수집
-- 캠페인 성과 분석
-- 대시보드 및 차트 제공
-- 인플루언서/광고주 평가 시스템
+### 💳 Payment & Settlement
+- Toss Payments integration
+- Automatic subscription renewal service
+- Subscription cancellation service
 
-### 🤖 AI 기능
-- GPT 기반 챗봇 서비스
-- 캠페인 추천 시스템
-- 콘텐츠 분석
+### 📈 Analytics & Reporting
+- YouTube channel statistics collection
+- Campaign performance analysis
+- Dashboard and chart provision
+- Influencer/Advertiser evaluation system
 
-## 📁 프로젝트 구조
+### 🤖 AI Features
+- GPT-based chatbot service
+- Campaign recommendation system
+- Content analysis
+
+---
+
+## 📁 Project Structure
 
 ```
+
 linki/
 ├── backend/
-│   ├── discovery-service/          # Eureka 서버
-│   ├── apigateway-service/         # API 게이트웨이
-│   ├── integration-service/        # 메인 비즈니스 로직
-│   ├── admin-integration-service/  # 관리자 기능
-│   ├── chat-service/              # 채팅 서비스
-│   ├── payment-service/           # 결제 서비스
-│   ├── subscribe-service/         # 구독 서비스
-│   └── chatbot-service/           # 챗봇 서비스
+│   ├── discovery-service/          \# Eureka Server
+│   ├── apigateway-service/         \# API Gateway
+│   ├── integration-service/        \# Main business logic
+│   ├── admin-integration-service/  \# Admin functionalities
+│   ├── chat-service/               \# Chat service
+│   ├── payment-service/            \# Payment service
+│   ├── subscribe-service/          \# Subscription service
+│   └── chatbot-service/            \# Chatbot service
 ├── frontend/
-│   ├── linki-user/               # 사용자 웹 앱
-│   ├── linki-admin/              # 관리자 웹 앱
-│   └── json-server/              # 개발용 Mock API
-└── quries/                       # 데이터베이스 스키마 & 더미데이터
-```
+│   ├── linki-user/                 \# User web app
+│   ├── linki-admin/                \# Admin web app
+│   └── json-server/                \# Mock API for development
+└── quries/                         \# Database schema & dummy data
 
-## 🚀 실행 방법
+````
 
-### 1. 사전 요구사항
+---
+
+## 🚀 How to Run
+
+### 1. Prerequisites
 - Java 17+
 - Node.js 18+
 - MySQL 8.0+
 - Redis 6.0+
 - Apache Kafka 2.8+
 
-### 2. 데이터베이스 설정
+### 2. Database Setup
 ```sql
-mysql -u root -p quries/talbeInit.sql
+mysql -u root -p quries/tableInit.sql
 mysql -u root -p linkiDB < quries/dummydata.sql
-```
+````
 
-### 3. 백엔드 서비스 실행 순서
+### 3\. Backend Service Execution Order
 
 #### 3.1 Discovery Service (Eureka Server)
+
 ```bash
 cd discovery-service
 ./gradlew bootRun
-# http://localhost:8761
+# Check: http://localhost:8761
 ```
 
 #### 3.2 API Gateway
+
 ```bash
 cd apigateway-service
 ./gradlew bootRun
-# http://localhost:8000
+# Check: http://localhost:8000
 ```
 
 #### 3.3 Core Services
+
 ```bash
-# Integration Service (메인 서비스)
+# Integration Service (Main service)
 cd integration-service
 ./gradlew bootRun
 
@@ -190,37 +245,43 @@ cd chatbot-service
 ./gradlew bootRun
 ```
 
-### 4. 프론트엔드 실행
+### 4\. Frontend Execution
 
+#### 4.1 User Web App
 
-#### 4.1 사용자 웹 앱
 ```bash
 cd frontend/linki-user
 npm install
 npm run dev
-# http://localhost:3001
+# Check: http://localhost:3001
 ```
-persistedstate API 추가
+
+Add persistedstate API:
+
 ```bash
 cd frontend/linki-user
 npm install pinia-plugin-persistedstate@3
 ```
 
-#### 4.2 관리자 웹 앱
+#### 4.2 Admin Web App
+
 ```bash
 cd frontend/linki-admin
 npm install
 npm run dev
-# http://localhost:3002
+# Check: http://localhost:3002
 ```
 
-## 🔧 환경 설정
+-----
 
-### Backend 설정 파일
-각 서비스의 `application.yml` 또는 `application.properties`에서 다음 설정들을 확인하세요:
+## 🔧 Configuration
 
-```yml
-# 공통 설정
+### Backend Configuration Files
+
+Check the `application.yml` or `application.properties` in each service for the following settings:
+
+```yaml
+# Common Configuration
 eureka:
   client:
     service-url:
@@ -237,7 +298,8 @@ spring:
     port: 6379
 ```
 
-### 환경변수 설정
+### Environment Variable Setup
+
 ```bash
 # JWT Secret Key
 export SECRET_HS256=your_jwt_secret_key
@@ -245,7 +307,7 @@ export SECRET_HS256=your_jwt_secret_key
 # YouTube API Key
 export YOUTUBE_API_KEY=your_youtube_api_key
 
-# 유캔사인 API
+# YuCanSign API
 export UCAN_SIGN_API_KEY=your_ucan_sign_key
 
 # Toss Payments
@@ -256,90 +318,114 @@ export TOSS_SECRET_KEY=your_toss_secret_key
 export OPENAI_API_KEY=your_openai_api_key
 ```
 
-## 📊 데이터베이스 스키마
+-----
 
-### 주요 테이블
-- **user**: 사용자 기본 정보
-- **influencer**: 인플루언서 정보
-- **advertiser**: 광고주 정보
-- **channel**: YouTube 채널 정보
-- **campaign**: 캠페인 정보
-- **proposal**: 제안서 정보
-- **contract**: 계약 정보
-- **settlement**: 정산 정보
-- **chat**: 채팅방 정보
-- **message**: 메시지 정보
+## 📊 Database Schema
 
-## 🔍 API 문서
+### Key Tables
 
-### 주요 API 엔드포인트
+  - **user**: Basic user information
+  - **influencer**: Influencer details
+  - **advertiser**: Advertiser details
+  - **channel**: YouTube channel information
+  - **campaign**: Campaign details
+  - **proposal**: Proposal details
+  - **contract**: Contract information
+  - **settlement**: Settlement details
+  - **chat**: Chatroom information
+  - **message**: Message content
 
-#### 사용자 관리
-- `POST /v1/api/auth/login` - 로그인
-- `POST /v1/api/auth/register` - 회원가입
-- `GET /v1/api/user/profile` - 프로필 조회
+-----
 
-#### 캠페인 관리
-- `GET /v1/api/campaigns` - 캠페인 목록
-- `POST /v1/api/campaigns` - 캠페인 생성
-- `POST /v1/api/proposals` - 제안서 제출
+## 🔍 API Documentation
 
-#### 계약 관리
-- `POST /v1/api/contracts` - 계약서 생성
-- `GET /v1/api/contracts/{id}` - 계약서 조회
-- `PUT /v1/api/contracts/{id}/complete` - 계약 완료
+### Key API Endpoints
 
-#### 채팅
-- `GET /v1/chat-service/api/chats` - 채팅방 목록
-- `WebSocket /ws/chat` - 실시간 채팅
+#### User Management
 
-#### 결제
-- `POST /v1/payment-service/api/billing` - 빌링키 등록
-- `POST /v1/subscribe-service/api/subscribe` - 구독 신청
+  - `POST /v1/api/auth/login` - User login
+  - `POST /v1/api/auth/register` - User registration
+  - `GET /v1/api/user/profile` - Retrieve user profile
 
-## 🔐 보안
+#### Campaign Management
 
-- JWT 기반 인증/인가
-- Spring Security 설정
-- CORS 정책 적용
-- API Rate Limiting
-- 민감 정보 암호화
+  - `GET /v1/api/campaigns` - List campaigns
+  - `POST /v1/api/campaigns` - Create a new campaign
+  - `POST /v1/api/proposals` - Submit a campaign proposal
 
-## 📈 성능 최적화
+#### Contract Management
 
-- Redis 캐싱 적용
-- 데이터베이스 인덱스 최적화 (54개 인덱스 적용)
-- Keyset 페이지네이션
-- DB락을 통한 동시성 처리 
-- 비동기 처리(use kafka) 를 통한 트래픽 처리
-- CDN 적용 (이미지/정적 파일)
+  - `POST /v1/api/contracts` - Create a new contract
+  - `GET /v1/api/contracts/{id}` - Retrieve contract details
+  - `PUT /v1/api/contracts/{id}/complete` - Mark contract as complete
 
-## 🤝 기여 방법
+#### Chat
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+  - `GET /v1/chat-service/api/chats` - List chat rooms
+  - `WebSocket /ws/chat` - Real-time chat communication
 
-## 📝 라이선스
+#### Payments
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+  - `POST /v1/payment-service/api/billing` - Register billing key
+  - `POST /v1/subscribe-service/api/subscribe` - Subscribe to service
 
-## 👥 팀
+-----
 
-- [신민혁](https://github.com/minhyeokshin)(팀장) : 데이터 분석/ 플렛폼 관리자 기능
-- [고윤아](https://github.com/kya9505)(부팀장) : notion 및 문서관리 , 채팅
-- [이정섭](https://github.com/dlwjdtjq001) : 네트워크 관리 , 결제 / 구독 기능 , msa인프라
-- [김성준](https://github.com/kimsj18) : 시큐리티 / 회원 / 챗봇
-- [김선민](https://github.com/seonmin12) : 인플루언서 기능
-- [정난희](https://github.com/Eveieve) : 광고주 기능
+## 🔐 Security
 
+  - JWT-based authentication and authorization
+  - Spring Security configuration
+  - CORS policy enforcement
+  - API Rate Limiting
+  - Sensitive information encryption
+  - Concurrency control via database locks
 
-## 📞 문의
+-----
 
-프로젝트에 대한 문의사항이 있으시면 이슈를 등록하거나 이메일로 연락주세요.
+## 📈 Performance Optimization
 
----
+  - Redis caching
+  - Database index optimization (54 indexes applied)
+  - Keyset pagination for efficient data retrieval
+  - Asynchronous processing with Kafka for high-traffic handling
+  - CDN integration for images and static files
 
-**Linki** - 인플루언서와 브랜드를 연결하는 혁신적인 마케팅 플랫폼 🚀
+-----
+
+## 🤝 How to Contribute
+
+1.  Fork the repository
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+-----
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
+
+-----
+
+## 👥 Team
+
+  - [Minhyeok Shin](https://www.google.com/search?q=https://github.com/minhyeokshin) (Team Lead): Data Analysis, Platform Admin Features
+  - [Yoonah Ko](https://github.com/kya9505) (Deputy Lead): Notion & Documentation, Chat
+  - [Jeongseop Lee](https://github.com/dlwjdtjq001): Network Management, Payment/Subscription Features, MSA Infrastructure
+  - [Sungjun Kim](https://github.com/kimsj18): Security, User Management, Chatbot
+  - [Seonmin Kim](https://github.com/seonmin12): Influencer Features
+  - [Nanhee Jeong](https://github.com/Eveieve): Advertiser Features
+
+-----
+
+## 📞 Contact
+
+For any inquiries about the project, please open an issue or contact us via email.
+
+-----
+
+**Linki** - An innovative marketing platform connecting influencers and brands 🚀
+
+```
+```
