@@ -10,14 +10,12 @@
 
 ## 📢 What is Linki? All-in-one Influencer Marketing Platform
 
-**Linki**는 인플루언서와 광고주를 쉽고 안전하게 연결해주는 올인원 마케팅 플랫폼입니다.  
-인플루언서는 다양한 브랜드 캠페인에 참여할 수 있고, 광고주는 원하는 인플루언서를 손쉽게 찾고 계약할 수 있습니다.  
-전자계약, 실시간 채팅, 자동 정산 등 투명하고 신뢰할 수 있는 광고 생태계를 제공합니다.
+**Linki** is an all-in-one marketing platform that seamlessly connects influencers and advertisers.  
+Influencers can join brand campaigns, while advertisers can easily discover and contract with the right influencers.  
+The platform ensures a secure and transparent advertising ecosystem with features like electronic contracts, real-time chat, and automated settlements.
 
-> **Linki** is an all-in-one marketing platform that seamlessly connects influencers and advertisers.  
-> Influencers can join brand campaigns, while advertisers can easily discover and contract with the right influencers.  
-> The platform ensures a secure and transparent advertising ecosystem with features like electronic contracts, real-time chat, and automated settlements.
-
+### [Go to ERD Diagram](https://www.erdcloud.com/d/tHnS9EZLguhoSFaMD)
+### [Notion Page - Meeting Logs, Deliverables ](https://shorturl.at/dwkOo)
 ---
 
 ## 🚀 Getting Started
