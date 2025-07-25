@@ -8,7 +8,7 @@
 
 ---
 
-## 📢 What is Linki? All-in-one Influencer Marketing Platform
+## 📢 Linki - All-in-one Influencer Marketing Platform
 
 **Linki** is an all-in-one marketing platform that seamlessly connects influencers and advertisers.  
 Influencers can join brand campaigns, while advertisers can easily discover and contract with the right influencers.  
